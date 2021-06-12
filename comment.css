@@ -1,0 +1,55 @@
+@charset "UTF-8";
+body { 
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  background-color: #FFF;
+  color: #000;
+  font-size: 1rem;
+  font-family: Raleway, "Hiragino Kaku Gothic ProN", Meiryo,  sans-serif;
+}
+ul {
+    list-style:none;
+}
+.tweet-show-footer-input-right {
+    margin: 10px;
+    text-align: right;
+}
+.tweet-footer-right {
+    text-align: right;
+}
+#postComment {
+    margin: 10px;
+    display: inline-block;
+    width: 50px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #00BFFF;
+    color: #fff;
+    letter-spacing: 1px;
+    font-size: 1rem;
+}
+.tweet-show-comment-box{
+  border: 4px solid;
+  border-color: #00F;
+}
+.tweet-show-comment-name-wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+.tweet-show-comment-name-box{
+  vertical-align: top;
+}
+.tweet-show-comment-img{
+  width: 100px;
+  height: auto;
+}
+.tweet-show-comment {
+    text-align: center;
+    background-color:  #999;
+}
+.tweet-show-footer-menu{
+    text-align: right;
+    text-decoration: none;
+}
