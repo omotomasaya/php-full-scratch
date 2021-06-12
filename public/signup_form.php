@@ -71,10 +71,10 @@ if(isset($_POST['signup'])){
       </button>
     </div>
     <?php
-        if(isset($error)){
-          echo '<div class="error">'.$error.'</div>';
-        }
-      ?>
+      if(isset($error)){
+        echo '<div class="error">'.$error.'</div>';
+      }
+    ?>
   </div>
 </body>
 </html>

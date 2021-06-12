@@ -35,6 +35,7 @@ if (isset($_GET['id']) === true && empty($_GET['id']) === false) {
   <ul>
     <li><a href="home.php">ホーム</a></li>
     <li><a href="mypage.php?user_id=<?php echo $user->user_id;?>">マイページ</a></li>
+    <li><a href="password.php?user_id=<?php echo $user->user_id;?>">設定</a></li>
     <li><a href="public/logout.php">ログアウト</a></li>
   </ul>
 </nav> 

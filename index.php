@@ -1,6 +1,8 @@
 <?php
 require_once('core/class.php');
+
   $getFromU->unloggedIn();
+  
 ?>
 <!DOCTYPE html>
 <html lang="ja">

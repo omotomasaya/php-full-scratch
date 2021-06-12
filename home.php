@@ -8,34 +8,46 @@ require_once('core/class.php');
   $getFromU->loggedIn();
 
   if(isset($_POST['tweet'])){
+
     $tweetText = $getFromU->checkInput($_POST['tweetText']);
     $image = '';
 
     if(!empty($tweetText) && !empty($_FILES['tweetImage']['name'])){
+
         if(strlen($tweetText) > 140){
+
           $error = "140文字以内にしてくだざい";
+
         }
 
         if(!empty($_FILES['tweetImage']['name'])){
+
           $tweetImage = $getFromU->uploadTextImage($_FILES['tweetImage'], $tweetBy, $tweetText);
 
         }
     }elseif(!empty($tweetText) or !empty($_FILES['tweetImage']['name'])){
 
       if(!empty($_FILES['tweetImage']['name'])){
+
         $tweetImage = $getFromU->uploadImage($_FILES['tweetImage'], $tweetBy);
+
       }
 
       if(!empty($tweetText)){
 
         if(strlen($tweetText) > 140){
+
           $error = "140文字以内にしてくだざい";
+
         }
 
         $getFromU->uploadText($tweetText, $tweetBy);
+        
       }
     }else{
+
       $error = "画像もしくは文字を入力してください";
+
     }
   }
 
@@ -60,15 +72,12 @@ require_once('core/class.php');
   <ul>
     <li><a href="home.php">ホーム</a></li>
     <li><a href="mypage.php?user_id=<?php echo $user->user_id;?>">マイページ</a></li>
+    <li><a href="password.php?user_id=<?php echo $user->user_id;?>">設定</a></li>
     <li><a href="public/logout.php">ログアウト</a></li>
   </ul>
 </nav> 
 </div>
 </header>
-<input type="text" id="search" name="search" class="form-control" placeholder="Type to search partners....">
-   <div id="search-list" style="background-color:#beb6ac;"></div>
-</form>
-<script type="text/javascript" src="assets/js/search.js"></script>
 <div class="main-wrapper">
   <div class="info-wrapper">
     <div class="info-box">
@@ -79,9 +88,9 @@ require_once('core/class.php');
       <div class="info-name-box">
         <div class="info-name">
           <div><a href="mypage.php?user_id=<?php echo $user->user_id?>"><?php echo $user->username;?></a></div>
-        </div><!-- in b name end-->
-      </div><!-- info body name end-->
-    </div><!-- info in body end-->
+        </div>
+      </div>
+    </div>
     <div class="number-wrapper">
       <div class="num-box">
         <div class="num-head">
@@ -138,13 +147,13 @@ require_once('core/class.php');
       <div class="tweets">
         <?php $getFromT->tweets($user_id);?>
       </div>
-      <div class="popupTweet">
-        <div id="popupTweet-t"></div>
-      </div>
     </div>
-<?php $getFromF->whoToFollow($user_id, $user_id);?>
+    <input type="text" id="search" name="search" class="form-control" placeholder="検索">
+      <div id="search-list"></div>
+      <div class="who-user-list"><?php $getFromF->whoToFollow($user_id, $user_id);?></div>
   </div>
 </div>
+<script type="text/javascript" src="assets/js/search.js"></script>
 <script type="text/javascript" src="assets/js/counter.js"></script>
 <script type="text/javascript" src="assets/js/like.js"></script>
 <script type="text/javascript" src="assets/js/delete.js"></script>
