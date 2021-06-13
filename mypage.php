@@ -4,6 +4,7 @@ require_once('core/class.php');
   $getFromU->loggedIn();
   
   if (isset($_GET['user_id']) === true && empty($_GET['user_id']) === false) {
+    
     $profileId = $_GET['user_id'];
     $profileData = $getFromU->userData($profileId);
     $user_id = $_SESSION['user_id'];
@@ -30,6 +31,17 @@ require_once('core/class.php');
   <ul>
     <li><a href="home.php">ホーム</a></li>
     <li><a href="mypage.php?user_id=<?php echo $user->user_id;?>">マイページ</a></li>
+    <li id="contextmenu">
+      <div>設定</div>
+      <span class="inner_line" id="line1">
+        <p>
+          <a href="password.php?user_id=<?php echo $user->user_id;?>">パスワード変更</a>
+        </p>
+        <p>
+          <a href="email.php?user_id=<?php echo $user->user_id;?>">メールアドレス変更</a>
+        </p>
+      </span>
+    </li>
     <li><a href="public/logout.php">ログアウト</a></li>
   </ul>
 </nav> 
@@ -159,5 +171,6 @@ require_once('core/class.php');
 <script type="text/javascript" src="assets/js/like.js"></script>
 <script type="text/javascript" src="assets/js/follow.js"></script>
   </div>
+<script type="text/javascript" src="assets/js/menubar.js"></script>
 </body>
 </html>

@@ -35,7 +35,17 @@ if (isset($_GET['id']) === true && empty($_GET['id']) === false) {
   <ul>
     <li><a href="home.php">ホーム</a></li>
     <li><a href="mypage.php?user_id=<?php echo $user->user_id;?>">マイページ</a></li>
-    <li><a href="password.php?user_id=<?php echo $user->user_id;?>">設定</a></li>
+    <li id="contextmenu">
+      <div>設定</div>
+      <span class="inner_line" id="line1">
+        <p>
+          <a href="password.php?user_id=<?php echo $user->user_id;?>">パスワード変更</a>
+        </p>
+        <p>
+          <a href="email.php?user_id=<?php echo $user->user_id;?>">メールアドレス変更</a>
+        </p>
+      </span>
+    </li>
     <li><a href="public/logout.php">ログアウト</a></li>
   </ul>
 </nav> 
@@ -136,5 +146,6 @@ if (isset($_GET['id']) === true && empty($_GET['id']) === false) {
 <script type="text/javascript" src="assets/js/counter.js"></script>
 <script type="text/javascript" src="assets/js/like.js"></script>
 <script type="text/javascript" src="assets/js/delete.js"></script>
+<script type="text/javascript" src="assets/js/menubar.js"></script>
 </body>
 </html>

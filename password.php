@@ -1,10 +1,11 @@
 <?php
 require_once('core/class.php');
+ini_set('display_errors', 1);
 
   $getFromU->loggedIn();
   
   $user_id = $_GET['user_id'];
-  $userData = $getFromU->userData($user_id);
+  $user = $getFromU->userData($user_id);
 
   //curPasswordはcurrentPasswordの略
   //conPasswordはconfirmationPasswordの略
@@ -29,7 +30,7 @@ require_once('core/class.php');
 
         if($newPassword === $conPassword){
        
-          if(password_verify($curPassword, $userData->password)){
+          if(password_verify($curPassword, $user->password)){
 
             $hash = password_hash($newPassword, PASSWORD_DEFAULT);
             $getFromU->passwordChange($hash, $user_id);
@@ -69,14 +70,24 @@ require_once('core/class.php');
     <script src="https://code.jquery.com/jquery-3.3.1.js">
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    </head>
+  </head>
 <body>
 <div class="global-nav">
 <nav>
   <ul>
     <li><a href="home.php">ホーム</a></li>
     <li><a href="mypage.php?user_id=<?php echo $user->user_id;?>">マイページ</a></li>
-    <li><a href="password.php?user_id=<?php echo $user->user_id;?>">設定</a></li>
+    <li id="contextmenu">
+      <div>設定</div>
+      <span class="inner_line" id="line1">
+        <p>
+          <a href="password.php?user_id=<?php echo $user->user_id;?>">パスワード変更</a>
+        </p>
+        <p>
+          <a href="email.php?user_id=<?php echo $user->user_id;?>">メールアドレス変更</a>
+        </p>
+      </span>
+    </li>
     <li><a href="public/logout.php">ログアウト</a></li>
   </ul>
 </nav> 
@@ -99,5 +110,6 @@ require_once('core/class.php');
     }
   ?>
   </div>
+  <script type="text/javascript" src="assets/js/menubar.js"></script>
 </body>
 </html>
