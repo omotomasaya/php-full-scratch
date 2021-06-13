@@ -1,5 +1,6 @@
 <?php 
 ini_set('display_errors', 1);
+
 class User {
   protected $pdo;
 
@@ -31,13 +32,6 @@ class User {
     $stmt->bindParam(":user_id", $user_id, PDO::PARAM_INT);
     $stmt->execute();
     return $stmt->fetch(PDO::FETCH_OBJ);
-  }
-
-  public function logout(){
-    $_SESSION = array();
-    session_destroy();
-    header('Location: ../index.php');
-    exit;
   }
 
   public function update($username, $bio ,$user_id){
@@ -104,6 +98,20 @@ class User {
     return $stmt->fetchAll(PDO::FETCH_OBJ);
   }
 
+  public function passwordChange($hash, $user_id){
+    $stmt = $this->pdo->prepare("UPDATE users SET password = :password WHERE user_id = :user_id");
+    $stmt->bindValue(':user_id', $user_id, PDO::PARAM_INT);
+    $stmt->bindValue(':password', $hash, PDO::PARAM_STR);
+    $stmt->execute();
+  }
+
+  public function emailChange($email, $user_id){
+    $stmt = $this->pdo->prepare("UPDATE users SET email = :email WHERE user_id = :user_id");
+    $stmt->bindValue(':user_id', $user_id, PDO::PARAM_INT);
+    $stmt->bindValue(':email', $email, PDO::PARAM_STR);
+    $stmt->execute();
+  }
+
   public function loggedIn(){
     if(!isset($_SESSION['user_id'])) {
       header('Location: http://localhost:8888/portfolio/index.php');
@@ -118,5 +126,11 @@ class User {
     }
   }
 
+  public function logout(){
+    $_SESSION = array();
+    session_destroy();
+    header('Location: ../index.php');
+    exit;
+  }
 }
 ?>
