@@ -33,7 +33,7 @@ require_once('core/class.php');
 
             $hash = password_hash($newPassword, PASSWORD_DEFAULT);
             $getFromU->passwordChange($hash, $user_id);
-            $error = '変更しました。'
+            $error = '変更しました。';
 
           }else{
 

@@ -82,7 +82,6 @@ require_once('core/class.php');
   <div class="info-wrapper">
     <div class="info-box">
         <div class="info-image">
-        <!-- PROFILE-IMAGE -->
           <img src="<?php echo $user->profileImage;?>" class="image">
         </div>
       <div class="info-name-box">
