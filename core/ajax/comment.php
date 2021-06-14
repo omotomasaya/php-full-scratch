@@ -12,37 +12,40 @@
     $comments = $getFromT->comments($tweetID);
 
     foreach ($comments as $comment) {
-        echo '<div class="tweet-show-popup-comment-box">
-            <div class="tweet-show-popup-comment-inner">
-              <div class="tweet-show-popup-comment-head">
-                <div class="tweet-show-popup-comment-head-left">
-                   <div class="tweet-show-popup-comment-img">
-                    <img src="'.$comment->profileImage.'">
-                   </div>
-                </div>
-                <div class="tweet-show-popup-comment-head-right">
-                    <div class="tweet-show-popup-comment-name-box">
-                    <div class="tweet-show-popup-comment-name-box-name"> 
-                      <a href="'.$comment->username.'">'.$comment->username.'</a>
+        echo '<div class="tweet-show-comment-box">
+              <div class="tweet-show-comment-inner">
+                <div class="tweet-show-comment-head">
+                  <div class="tweet-show-comment-head-right">
+                      <div class="tweet-show-comment-name-wrapper">
+                        <div class="tweet-show-comment-name-box">
+                          <img src="'.$comment->profileImage.'" class="tweet-show-comment-img">
+                        </div>
+                        <div class="tweet-show-comment-name-box">
+                          <span><a href="mypage.php?user_id='.$comment->commentBy.'">'.$comment->username.'</a></span>
+                          <span>@'.$comment->username.'</span>
+                          <span>'.$comment->createdOn.'</span>
+                       </div>
+                     </div>
+                     <div class="tweet-show-comment">
+                          <p>'.$comment->comment.'</p>
                     </div>
-                    <div class="tweet-show-popup-comment-name-box-tname">
-                      <a href="'.$comment->username.'">@'.$comment->username.'</a>
+                    <div class="tweet-show-footer-menu">
+                      <ul>
+                          ';
+                          if($comment->commentBy == $user_id){
+                            echo '
+                            <li><div class="deleteComment" data-tweet="'.$tweet->tweetID.'" data-comment="'.$comment->comment_id.'">削除</div></li>';
+                          }
+                          echo '
+                      </ul>
                     </div>
-                   </div>
-                   <div class="tweet-show-popup-comment-right-tweet">
-                      <p><a href="'.$tweet->username.'">@'.$tweet->username.'</a> '.$comment->comment.'</p>
-                   </div>
-                  <div class="tweet-show-popup-footer-menu">
-                        <ul> 
-                          <li><label class="deleteComment" data-tweet="'.$tweet->tweetID.'" data-comment="'.$comment->commentID.'">削除</label></li>
-                        </ul>
                   </div>
                 </div>
               </div>
             </div>
-            <!--TWEET SHOW POPUP COMMENT inner END-->
-            </div>
             ';
       }
+  }else{
+    echo 'コメントを入力してください';
   }
 ?>

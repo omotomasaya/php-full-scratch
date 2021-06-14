@@ -7,8 +7,11 @@ require_once('../class.php');
     if(!empty($result))
     {
       foreach ($result as $user){
-            echo '<a href="mypage.php?user_id='.$user->user_id.'"><li>'.$user->username.'</li></a>';
-          }
+        echo '
+          <ul class="search-username">
+            <li><a href="mypage.php?user_id='.$user->user_id.'">'.$user->username.'</a></li>
+          </ul>';
+      }
     }
   }
 ?>

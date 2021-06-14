@@ -66,14 +66,13 @@
       echo '<div class="follow-wrap"><div class="follow-inner"><div class="follow-title"><h3>Who to follow</h3></div>';
       foreach ($users as $user){
         echo '<div class="follow-body">
-                <div class="follow-img">
-                  <img src="'.$user->profileImage.'"/>
-                  </div>
+                <div class="follow-image">
+                  <img src="'.$user->profileImage.'">
+                </div>
                 <div class="follow-content">
-                  <div class="fo-co-head">
+                  <div class="follow-comtemt-head">
                     <a href="'.$user->username.'">'.$user->username.'</a><span>@'.$user->username.'</span>
                   </div>
-                  <!-- FOLLOW BUTTON -->
                   '.$this->followBtn($user->user_id, $user_id).'
                 </div>
               </div>';

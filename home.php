@@ -59,6 +59,7 @@ require_once('core/class.php');
   <title>twitter clone</title>
   <link rel="stylesheet" href="assets/css/home.css">
   <link rel="stylesheet" href="assets/css/tweet.css">
+  <link rel="stylesheet" href="assets/css/follow.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
   <script src="https://code.jquery.com/jquery-3.3.1.js">
   </script>
@@ -147,7 +148,7 @@ require_once('core/class.php');
             </div>
             <div class="tweet-fo-right">
               <span id="count">140</span>
-              <input type="submit" name="tweet" value="tweet" class="btn">
+              <input type="submit" name="tweet" value="送信" class="btn">
             </div>
           </div>
         </form>    
@@ -159,7 +160,9 @@ require_once('core/class.php');
     </div>
     <input type="text" id="search" name="search" class="form-control" placeholder="検索">
       <div id="search-list"></div>
-      <div class="who-user-list"><?php $getFromF->whoToFollow($user_id, $user_id);?></div>
+      <div class="who-user-list">
+        <?php $getFromF->whoToFollow($user_id, $user_id);?>  
+      </div>
   </div>
 </div>
 <script type="text/javascript" src="assets/js/search.js"></script>

@@ -44,11 +44,11 @@
                       echo '</span></button>';
                     }
                     echo '</div><div class="tweet-show-footer">
-                      <a href="displayComment.php?id='.$tweet->tweetID.'">コメント</a><span class="commentCounter">';
+                      <a href="displayComment.php?id='.$tweet->tweetID.'" class="far fa-comment"></a><span class="commentCounter">';
                       echo $this->countComment($tweet->tweetID);
                       echo '</span>';
                           if($tweet->tweetBy === $user_id){
-                            echo '<label class="deleteTweet" data-tweet="'.$tweet->tweetID.'">削除</label></li>';
+                            echo '<div class="deleteTweet" data-tweet="'.$tweet->tweetID.'">削除</div>';
                             }
 
                     echo '</div>
