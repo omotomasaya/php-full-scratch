@@ -1,7 +1,7 @@
 <?php
 require_once('core/class.php');
 
-  $getFromU->loggedIn();
+  $getFromU->unloggedIn();
   
   if (isset($_GET['user_id']) === true && empty($_GET['user_id']) === false) {
     
@@ -46,43 +46,43 @@ require_once('core/class.php');
   </ul>
 </nav> 
 </div>
-<div class="in-wrapper">
-   <div class="profile-info-inner">
-    <div class="profile-box">
+<div class="mypage-wrapper">
+  <div class="profile-mypage-inner">
+    <div class="profile-mypage-box">
       <div class="profile-img">
         <img src="<?php echo $profileData->profileImage; ?>"/>
         <div class="profile-count">
-          <div class="n-head">
+          <div class="nember-head">
             TWEETS
           </div>
-          <div class="n-bottom">
+          <div class="nember-bottom">
             <?php $getFromT->countTweets($profileId); ?>
           </div>
           <li>
-          <a href="#">
-            <div class="n-head">
-              <a href="#">FOLLOWING</a>
+          <a href="followList.php?user_id=<?php echo $profileId?>">
+            <div class="nember-head">
+              FOLLOWING
             </div>
-            <div class="n-bottom">
-              <span class="count-following"><?php echo $getFromF->countFollow($user_id);?></span>
+            <div class="nember-bottom">
+              <span class="count-following"><?php echo $getFromF->countFollow($profileId);?></span>
             </div>
           </a>
           </li>
           <li>
-           <a href="#">
-              <div class="n-head">
+           <a href="followList.php?user_id=<?php echo $profileId?>">
+              <div class="nember-head">
                 FOLLOWERS
               </div>
-              <div class="n-bottom">
-                <span class="count-followers"><?php echo $getFromF->countFollower($user_id);?></span>
+              <div class="nember-bottom">
+                <span class="count-followers"><?php echo $getFromF->countFollower($profileId);?></span>
               </div>
             </a>
           </li>
         </div>
-    </div>
-   </div> 
-    <div class="profile-box">
-      <div class="profile-name-wrap">
+      </div>
+    </div> 
+    <div class="profile-mypage-box">
+      <div class="profile-name-wrapper">
         <label>名前</label>
         <div class="profile-name">
           <span><?php echo $profileData->username;?></span>

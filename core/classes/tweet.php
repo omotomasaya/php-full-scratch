@@ -11,7 +11,9 @@
       $stmt->execute();
       $tweets = $stmt->fetchAll(PDO::FETCH_OBJ);
       foreach ($tweets as $tweet){
+
         $like = $this->likesCheck($user_id, $tweet->tweetID);
+        
         echo '<div class="all-tweet">
                 <div class="tweet-show-wrapper"> 
                   <div class="tweet-show-inner">

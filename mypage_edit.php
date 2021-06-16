@@ -4,7 +4,7 @@ require_once('core/class.php');
   $user_id = $_SESSION['user_id'];
   $user = $getFromU->userData($user_id);
 
-  $getFromU->loggedIn();
+  $getFromU->unloggedIn();
 
   if(isset($_POST['username'])){
     if(!empty($_POST['username'])){

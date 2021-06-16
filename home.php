@@ -5,7 +5,7 @@ require_once('core/class.php');
   $user = $getFromU->userData($user_id);
   $tweetBy = $user_id;
 
-  $getFromU->loggedIn();
+  $getFromU->unloggedIn();
 
   if(isset($_POST['tweet'])){
 
@@ -90,42 +90,46 @@ require_once('core/class.php');
 </div>
 </header>
 <div class="main-wrapper">
-  <div class="info-wrapper">
-    <div class="info-box">
-        <div class="info-image">
+  <div class="information-wrapper">
+    <div class="information-box">
+        <div class="information-image">
           <img src="<?php echo $user->profileImage;?>" class="image">
         </div>
-      <div class="info-name-box">
-        <div class="info-name">
+      <div class="information-name-box">
+        <div class="information-name">
           <div><a href="mypage.php?user_id=<?php echo $user->user_id?>"><?php echo $user->username;?></a></div>
         </div>
       </div>
     </div>
     <div class="number-wrapper">
-      <div class="num-box">
-        <div class="num-head">
+      <div class="number-box">
+        <div class="number-head">
           ツイート
         </div>
-        <div class="num-body">
+        <div class="number-body">
           <?php $getFromT->countTweets($user_id);?>
         </div>
       </div>
-        <div class="num-box">
-          <div class="num-head">
-            フォロー中
-          </div>
-          <div class="num-body">
-            <span class="count-following"><?php echo $getFromF->countFollow($user_id);?></span>
-          </div>
+        <div class="number-box">
+          <a href="followList.php?user_id=<?php echo $user->user_id?>">
+            <div class="number-head">
+              フォロー中
+            </div>
+            <div class="number-body">
+              <span class="count-following"><?php echo $getFromF->countFollow($user_id);?></span>
+            </div>
+          </a>
         </div>
-        <div class="num-box">
-          <div class="num-head">
-            フォロワー
+        <div class="number-box">
+          <a href="followList.php?user_id=<?php echo $user->user_id?>">
+            <div class="number-head">
+              フォロワー
+            </div>
+          <div class="number-body">
+            <span class="count-followers"><?php echo $getFromF->countFollower($user_id);?>
+            </span>
           </div>
-        <div class="num-body">
-          <span class="count-followers"><?php echo $getFromF->countFollower($user_id);?>
-          </span>
-        </div>
+        </a>
       </div>  
     </div>
   </div>
@@ -161,7 +165,7 @@ require_once('core/class.php');
     <input type="text" id="search" name="search" class="form-control" placeholder="検索">
       <div id="search-list"></div>
       <div class="who-user-list">
-        <?php $getFromF->whoToFollow($user_id, $user_id);?>  
+        <?php $getFromF->whoToFollow($user_id, $user_id);?> 
       </div>
   </div>
 </div>

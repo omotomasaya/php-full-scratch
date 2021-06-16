@@ -1,7 +1,7 @@
 <?php
 require_once('core/class.php');
 
-  $getFromU->loggedIn();
+  $getFromU->unloggedIn();
   
 if (isset($_GET['id']) === true && empty($_GET['id']) === false) {
     $tweetID = $_GET['id'];

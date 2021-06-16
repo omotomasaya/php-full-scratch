@@ -49,6 +49,14 @@ img{
 .tweet-show-footer{
   text-align: right;
 }
+.deleteTweet, .deleteComment{
+  display: inline-block;
+  width: 40px;
+  border-radius: 5px;
+  background-color: red;
+  letter-spacing: 2px;
+  font-size: 1rem;
+}
 .good{
   color: blue;
 }

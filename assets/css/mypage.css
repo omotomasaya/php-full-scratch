@@ -16,12 +16,14 @@ a:link, a:visited, a:hover, a:active {
   text-align: center;
   background-color: #99FFFF;
 }
+li {
+  list-style: none;
+}
 nav ul{
   margin: 0 ;
   padding: 0 ;
 }
 nav ul li{
-  list-style: none;
   display: inline-block;
   width: 18%;
   min-width: 90px;
@@ -33,16 +35,17 @@ nav ul li a{
 nav ul li a:hover{
   color: #0000FF;
 }
-.profile-info-inner{
+.profile-mypage-inner{
   display: flex;
   text-align: center;
+  vertical-align: middle;
 }
-.profile-box{
+.profile-mypage-box{
   width: 40%;
   height: auto;
   margin: 5%;
 }
-.profile-name-wrap{
+.profile-name-wrapper{
   margin: 20% 0;
 }
 .edit-button{

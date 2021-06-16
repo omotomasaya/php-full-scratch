@@ -1,7 +1,7 @@
 <?php
 require_once('../core/class.php');
 
-$getFromU->unloggedIn();
+$getFromU->loggedIn();
 
 if(isset($_POST['login'])){
   $email = $getFromU->checkInput($_POST['email']);

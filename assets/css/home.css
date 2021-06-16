@@ -42,11 +42,11 @@ nav ul li a:hover{
   height: auto;
   text-align: center;
 }
-.info-wrapper{
+.information-wrapper{
   display: table-cell;
   width: 20%;
 }
-.info-name{
+.information-name{
   font-size: 100%;
 }
 .number-wrapper{
@@ -54,7 +54,7 @@ nav ul li a:hover{
   font-size: 80%;
   background-color: #666;
 }
-.num-body{
+.number-body{
   margin-left: 10%;
 }
 .btn{
@@ -87,6 +87,10 @@ nav ul li a:hover{
 }
 .tweet-fo-right{
   text-align: right;
+}
+.search-username li{
+  text-align: left;
+  list-style: none;
 }
 #count{
   color: #000;

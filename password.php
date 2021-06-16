@@ -1,8 +1,7 @@
 <?php
 require_once('core/class.php');
-ini_set('display_errors', 1);
 
-  $getFromU->loggedIn();
+  $getFromU->unloggedIn();
   
   $user_id = $_GET['user_id'];
   $user = $getFromU->userData($user_id);

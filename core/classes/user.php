@@ -113,15 +113,15 @@ class User {
   }
 
   public function loggedIn(){
-    if(!isset($_SESSION['user_id'])) {
-      header('Location: http://localhost:8888/portfolio/index.php');
+    if(isset($_SESSION['user_id'])) {
+      header('Location: http://localhost:8888/portfolio/home.php');
       exit;
     }
   }
 
   public function unloggedIn(){
-    if(isset($_SESSION['user_id'])) {
-      header('Location: http://localhost:8888/portfolio/home.php');
+    if(!isset($_SESSION['user_id'])) {
+      header('Location: http://localhost:8888/portfolio/index.php');
       exit;
     }
   }
