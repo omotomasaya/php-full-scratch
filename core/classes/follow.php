@@ -104,7 +104,7 @@
                   </div>
                   '.$this->followBtn($user->user_id, $user_id).'
                 </div>
-              </div>';
+              </div><p>'.$user->user_id.'</p>';
             }
       echo '</div></div>';
     }
@@ -128,7 +128,8 @@
                   </div>
                   '.$this->followBtn($user->user_id, $user_id).'
                 </div>
-              </div>';
+              </div><p>'.$user->user_id.'</p>'
+              ;
             }
       echo '</div></div>';
     }
