@@ -42,6 +42,9 @@ if(isset($_FILES['profileImage'])){
   <title>Profile edit page</title>
   <meta charset="UTF-8" />
   <link rel="stylesheet" href="assets/css/mypage_edit.css"/>
+  <script src="https://code.jquery.com/jquery-3.3.1.js">
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
 <div class="global-nav">
@@ -64,16 +67,15 @@ if(isset($_FILES['profileImage'])){
   </ul>
 </nav> 
 </div>
-<div class="in-wrapper">
-  <div class="profile-info-inner">
+<div class="mypage-wrapper">
+  <div class="profile-inner">
     <div class="profile-box">
-      <img src="<?php echo $user->profileImage;?>" class="profile-image" />
-      <div class="img-upload-button-wrap1">
-
+      <img src="<?php echo $user->profileImage;?>" class="profile-image">
+      <div class="img-upload-button-wrapper">
           <form method="post" enctype="multipart/form-data">
-            <input id="profileImage" type="file"  name="profileImage"/>
+            <input id="profileImage" type="file"  name="profileImage">
             <span>
-              <input type="submit" class="btn-image" value="Save Changes">
+              <input type="submit" class="btn-image" value="変更">
             </span>
             <?php
               if(isset($imageError)){
@@ -83,14 +85,15 @@ if(isset($_FILES['profileImage'])){
           </form>
       </div>
     </div>
-      <form method="post">  
-        <div class="profile-name-wrap">
+    <div class="profile-box">
+      <form method="post">
+        <div class="profile-name-wrapper">
           <label>名前</label>
           <div class="profile-name">
-            <input type="text" name="username" value="<?php echo $user->username;?>"/>
+            <input type="text" name="username" value="<?php echo $user->username;?>">
           </div>
         </div>
-        <div class="profile-bio-wrap">
+        <div class="profile-bio-wrapper">
           <label>プロフィール</label>
           <div class="profile-bio-inner">
             <textarea class="status" name="bio"><?php echo $user->bio;?></textarea>
@@ -102,12 +105,12 @@ if(isset($_FILES['profileImage'])){
           }
         ?>
         <span>
-        <input type="submit" class="btn" value="Save Changes">
+        <input type="submit" class="btn" value="変更">
         </span>
         </form>
       </div>
-
   </div>
-  <script type="text/javascript" src="assets/js/menubar.js"></script>
+</div>
+<script type="text/javascript" src="assets/js/menubar.js"></script>
 </body>
 </html>

@@ -4,7 +4,7 @@ $(function(){
     var tweet_id = $('#commentField').data('tweet');
 
     $.ajax({
-        url: "http://localhost:8888/portfolio/core/ajax/comment.php",
+        url: "http://localhost:8888/phpfullscratch/core/ajax/comment.php",
         method: "POST",
         data: {
             comment:comment,
