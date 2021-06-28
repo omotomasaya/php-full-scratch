@@ -2,7 +2,7 @@ $(function(){
     $(document).on('click','.deleteTweet', function(){
         var tweetID  = $(this).data('tweet');
         $.ajax({
-            url: "http://localhost:8888/portfolio/core/ajax/deleteTweet.php",
+            url: "http://localhost:8888/phpfullscratch/core/ajax/deleteTweet.php",
             method: "POST",
             data: {
                 deleteTweet:tweetID
@@ -17,7 +17,7 @@ $(function(){
         var tweetID  = $(this).data('tweet');
         var comment_id  = $(this).data('comment');
         $.ajax({
-            url: "http://localhost:8888/portfolio/core/ajax/deleteComment.php",
+            url: "http://localhost:8888/phpfullscratch/core/ajax/deleteComment.php",
             method: "POST",
             data: {
                 tweetID:tweetID,

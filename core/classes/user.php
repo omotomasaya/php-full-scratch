@@ -114,14 +114,14 @@ class User {
 
   public function loggedIn(){
     if(isset($_SESSION['user_id'])) {
-      header('Location: http://localhost:8888/portfolio/home.php');
+      header('Location: http://localhost:8888/phpfullscratch/home.php');
       exit;
     }
   }
 
   public function unloggedIn(){
     if(!isset($_SESSION['user_id'])) {
-      header('Location: http://localhost:8888/portfolio/index.php');
+      header('Location: http://localhost:8888/phpfullscratch/index.php');
       exit;
     }
   }

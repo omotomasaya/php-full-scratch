@@ -3,7 +3,7 @@ $(function(){
         var follow_id  = $(this).data('follow');
         var profile  = $(this).data('profile');
         $.ajax({
-            url: "http://localhost:8888/portfolio/core/ajax/follow.php",
+            url: "http://localhost:8888/phpfullscratch/core/ajax/follow.php",
             method: "POST",
             data: {
 
@@ -19,7 +19,7 @@ $(function(){
         var follow_id  = $(this).data('follow');
         var profile  = $(this).data('profile');
         $.ajax({
-            url: "http://localhost:8888/portfolio/core/ajax/follow.php",
+            url: "http://localhost:8888/phpfullscratch/core/ajax/follow.php",
             method: "POST",
             data: {
 

@@ -33,26 +33,38 @@ nav ul li a{
 nav ul li a:hover{
   color: #0000FF;
 }
-.profile-info-inner{
-  display: flex;
+textarea {
+  resize: none;
+  width:200px;
+  height:150px;
+}
+.mypage-wrapper{
+  width: 100%;
+}
+.profile-inner{
+  display: tabel;
   text-align: center;
-  margin: 10% 15% 10% 0;
+}
+.profile-box{
+  display: table-cell;
+  width: 1000px;
+  vertical-align: middle;
 }
 .profile-image{
-  width: 30%;
+  width: 50%;
   height: auto;
+  margin: 100px;
 }
-.profile-name-wrap{
-  margin: 30% 0;
+.profile-name-wrapper{
+  margin: 10% 0;
 }
 .edit-button{
   text-align: right;
 }
 .btn-image {
   display: inline-block;
-  width: 160px;
+  width: 100px;
   height: auto;
-  padding: 10px;
   border-radius: 10px;
   background-color: #00BFFF;
   color: #fff;
@@ -61,9 +73,8 @@ nav ul li a:hover{
 }
 .btn {
   display: inline-block;
-  width: 160px;
+  width: 100px;
   height: auto;
-  padding: 10px;
   border-radius: 10px;
   background-color: #00BFFF;
   color: #fff;
