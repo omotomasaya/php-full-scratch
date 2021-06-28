@@ -66,7 +66,7 @@
       echo '<div class="follow-wrapper">
               <div class="follow-inner">
                 <div class="follow-title">
-                  <h2>Who to follow</h2>
+                  <h2>フォローして<br>みよう！</h2>
                 </div>';
       foreach ($users as $user){
         echo '<div class="follow-body">
@@ -104,7 +104,7 @@
                   </div>
                   '.$this->followBtn($user->user_id, $user_id).'
                 </div>
-              </div><p>'.$user->user_id.'</p>';
+              </div>';
             }
       echo '</div></div>';
     }
@@ -128,8 +128,7 @@
                   </div>
                   '.$this->followBtn($user->user_id, $user_id).'
                 </div>
-              </div><p>'.$user->user_id.'</p>'
-              ;
+              </div>';
             }
       echo '</div></div>';
     }

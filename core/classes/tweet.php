@@ -20,7 +20,7 @@
                     <div class="tweet-show-head">
                       <div class="tweet-show-head-box">
                         <div class="tweet-show-profileimage">
-                          <img src="'.$tweet->profileImage.'"/>
+                          <img src="'.$tweet->profileImage.'">
                         </div>
                         <div class="tweet-show-content">
                           <div class="tweet-show-name">

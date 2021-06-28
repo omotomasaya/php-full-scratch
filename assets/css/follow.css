@@ -3,6 +3,10 @@
     width: 100px;
     text-align: right;
 }
+.follow-title {
+    font-size: 10px;
+    text-align: center;
+}
 .follow-image {
     min-width: 150px;
     max-width: 300px;

@@ -92,6 +92,9 @@ nav ul li a:hover{
   text-align: left;
   list-style: none;
 }
+.search-image {
+  width: 100px;
+}
 #count{
   color: #000;
 }

@@ -10,6 +10,9 @@ require_once('../class.php');
         echo '
           <ul class="search-username">
             <li><a href="mypage.php?user_id='.$user->user_id.'">'.$user->username.'</a></li>
+            <div class="search-image">
+              <img src="'.$user->profileImage.'" >
+            </div>
           </ul>';
       }
     }
