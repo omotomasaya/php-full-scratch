@@ -1,9 +1,11 @@
 <?php
   require_once('env.php');
 
-  $dsn = "mysql:host={$db['us-cdbr-east-04.cleardb.com']}; dbname={$db['heroku_dc045a7b9996d70']}";
-  $user = $db['be55cc2f486f93'];
-  $pass = $db['d253e777'];
+  $host = DB_HOST;
+  $dbname = DB_NAME;
+  $dsn = "mysql:host=$host; dbname=$dbname";
+  $user = DB_USER;
+  $pass = DB_PASS;
 
   try {
     $pdo = new PDO($dsn, $user, $pass, [
