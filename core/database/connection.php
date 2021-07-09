@@ -1,8 +1,6 @@
 <?php
   require_once('env.php');
 
-  function dbConnect(){
-
   $host = DB_HOST;
   $dbname = DB_NAME;
   $user = DB_USER;
@@ -18,9 +16,5 @@
     echo '接続失敗です'. $e->getMessage();
     exit();
   }
-
-  return $pdo;
-
-}
 
 ?>
