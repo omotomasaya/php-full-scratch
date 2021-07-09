@@ -3,10 +3,10 @@
 
   function dbConnect(){
 
-  $host = 'be55cc2f486f93';
-  $dbname = 'heroku_dc045a7b9996d70';
-  $user = 'us-cdbr-east-04.cleardb.com';
-  $pass = 'd253e777';
+  $host = DB_HOST;
+  $dbname = DB_NAME;
+  $user = DB_USER;
+  $pass = DB_PASS;
   $dsn = "mysql:host=$host;dbname=$dbname;charset=utf8mb4";
 
   try {
