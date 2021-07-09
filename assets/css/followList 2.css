@@ -1,0 +1,47 @@
+@charset "UTF-8";
+a:link, a:visited, a:hover, a:active {
+    text-decoration: none;
+    color: #000;
+}
+.profile-image {
+    width: 200px;
+    height: auto;
+    padding: 20px;
+}
+.profile-wrapper {
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+.profile-box {
+    display: table;
+    width: 100%;
+    height: auto;
+}
+.profile-image-box {
+    display: table-cell;
+    vertical-align: middle;
+    width: 50%;
+}
+.profile-information-box {
+    display: table-cell;
+    vertical-align: middle;
+}
+.follow-list-wrapper {
+    display: table;
+    text-align: center;
+    width: 100%;
+}
+.number-list-box {
+    display: table-cell;
+    border: 4px solid;
+    border-color: #031de2;
+    padding: 10px;
+}
+.follow-list-body {
+    width: 250px;
+    height: 300px;
+}
+.follow-list-image {
+    width: 50%;
+}

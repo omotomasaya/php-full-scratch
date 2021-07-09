@@ -1,0 +1,72 @@
+@charset "UTF-8";
+body { 
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  background-color: #FFF;
+  color: #000;
+  font-size: 1rem;
+  font-family: Raleway, "Hiragino Kaku Gothic ProN", Meiryo,  sans-serif;
+}
+a:link, a:visited, a:hover, a:active {
+  text-decoration: none;
+}
+
+.global-nav{
+  text-align: center;
+  background-color: #99FFFF;
+}
+nav ul{
+  margin: 0 ;
+  padding: 0 ;
+}
+nav ul li{
+  list-style: none;
+  display: inline-block;
+  width: 18%;
+  min-width: 90px;
+}
+nav ul li a{
+  text-decoration: none;
+  color: #000;
+}
+nav ul li a:hover{
+  color: #0000FF;
+}
+.profile-info-inner{
+  display: flex;
+  text-align: center;
+  margin: 10% 15% 10% 0;
+}
+.profile-image{
+  width: 30%;
+  height: auto;
+}
+.profile-name-wrap{
+  margin: 30% 0;
+}
+.edit-button{
+  text-align: right;
+}
+.btn-image {
+  display: inline-block;
+  width: 160px;
+  height: auto;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #00BFFF;
+  color: #fff;
+  letter-spacing: 1px;
+  font-size: 1.2rem;
+}
+.btn {
+  display: inline-block;
+  width: 160px;
+  height: auto;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #00BFFF;
+  color: #fff;
+  letter-spacing: 1px;
+  font-size: 1.2rem;
+}

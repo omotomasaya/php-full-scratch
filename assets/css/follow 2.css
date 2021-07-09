@@ -1,0 +1,13 @@
+@charset "UTF-8";
+.who-user-list {
+    width: 100px;
+    text-align: right;
+}
+.follow-image {
+    min-width: 150px;
+    max-width: 300px;
+    text-align: center;
+}
+.follow-comtent-head {
+    margin-left: 20%;
+}
