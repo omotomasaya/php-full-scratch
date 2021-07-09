@@ -1,7 +1,10 @@
 <?php
-  $dsn = 'mysql:host=localhost; dbname=twitterclone';
-  $user = 'root';
-  $pass = 'root';
+  require_onec('env.php');
+  $host = DB_HOST;
+  $dbname = DB_NAME;
+  $user = DB_USER;
+  $pass = DB_PASS;
+  $dsn = "mysql:host=$host;dbname=$dbname;charset=utf8mb4";
 
   try {
     $pdo = new PDO($dsn, $user, $pass, [
@@ -12,5 +15,7 @@
     echo '接続失敗です'. $e->getMessage();
     exit();
   }
+
+  return $pdo;
 
 ?>
