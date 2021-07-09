@@ -1,9 +1,9 @@
 <?php
 session_start();
-  include 'database/connection.php';
-  include 'classes/user.php';
-  include 'classes/tweet.php';
-  include 'classes/follow.php';
+  require_once 'database/connection.php';
+  require_once 'classes/user.php';
+  require_once 'classes/tweet.php';
+  require_once 'classes/follow.php';
 
   global $pdo;
 

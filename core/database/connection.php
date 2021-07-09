@@ -1,5 +1,8 @@
 <?php
-  require_onec('env.php');
+  require_once('env.php');
+
+  function dbconnect(){
+
   $host = DB_HOST;
   $dbname = DB_NAME;
   $user = DB_USER;
@@ -17,5 +20,7 @@
   }
 
   return $pdo;
+
+}
 
 ?>
