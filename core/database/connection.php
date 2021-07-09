@@ -1,11 +1,11 @@
 <?php
   require_once('env.php');
 
-  $host = 'be55cc2f486f93';
-  $dbname = 'be55cc2f486f93';
-  $user = 'us-cdbr-east-04.cleardb.com';
-  $pass = 'd253e777';
-  $dsn = "mysql:host=$host;dbname=$dbname;charset=utf8mb4";
+  $db = parse_url($_SERVER['mysql://be55cc2f486f93:d253e777@us-cdbr-east-04.cleardb.com/heroku_dc045a7b9996d70?reconnect=true']);
+  $db['heroku_dc045a7b9996d70'] = ltrim($db['path'], '/');
+  $dsn = "mysql:host={$db['us-cdbr-east-04.cleardb.com']};dbname={$db['heroku_dc045a7b9996d70']};charset=utf8";
+  $user = $db['be55cc2f486f93'];
+  $password = $db['d253e777'];
 
   try {
     $pdo = new PDO($dsn, $user, $pass, [
