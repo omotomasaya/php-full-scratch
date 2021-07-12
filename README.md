@@ -31,7 +31,7 @@
 # 使い方
  
 <p>テキストや画像を投稿することができます。</p>
-<img src="">
+<img src="https://user-images.githubusercontent.com/78944548/125280849-800a9c80-e350-11eb-8d3f-e68263842eb9.gif">
  
 # 追加したい機能
 <p>退会機能</p>
