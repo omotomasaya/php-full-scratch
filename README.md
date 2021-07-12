@@ -1,44 +1,37 @@
 # php-full-scratch
 
-# Name（リポジトリ/プロジェクト/OSSなどの名前）
+<img src="">
+
+# 目的
+<p>phpの学習のために作成しました。<br></p>
+<p>twitterのクローンアプリです。</p>
  
-分かりやすくてカッコイイ名前をつける（今回は"hoge"という名前をつける）
+# 機能
+
+<p>ログイン機能</p><br>
+<p>新規登録</p><br>
+<p>投稿機能</p><br>
+<p>ユーザー検索機能</p><br>
+<p>投稿削除</p><br>
+<p>いいねボタン</p><br>
+<p>コメント機能</p><br>
+<p>フォロー機能</p><br>
+<p>パスワード、メールアドレス変更</p><br>
  
-"hoge"が何かを簡潔に紹介する
+# 使用技術
  
-# DEMO
+<p>mampを使いました。</p><br>
+<p>PHP 7.4.9</p><br>
+<p>HTML5</p><br>
+<p>CSS3</p><br>
+<p>jQurey</p><br>
+<p>JavaScript</p><br>
  
-"hoge"の魅力が直感的に伝えわるデモ動画や図解を載せる
+# 使い方
  
-# Features
+<p>テキストや画像を投稿することができます。</p>
  
-"hoge"のセールスポイントや差別化などを説明する
  
-# Requirement
- 
-"hoge"を動かすのに必要なライブラリなどを列挙する
- 
-* huga 3.5.2
-* hogehuga 1.0.2
- 
-# Installation
- 
-Requirementで列挙したライブラリなどのインストール方法を説明する
- 
-```bash
-pip install huga_package
-```
- 
-# Usage
- 
-DEMOの実行方法など、"hoge"の基本的な使い方を説明する
- 
-```bash
-git clone https://github.com/hoge/~
-cd examples
-python demo.py
-```
- 
-# Note
- 
-注意点などがあれば書く
+# 追加したい機能
+<p>退会機能</p><br>
+<p>ハッシュタグ検索</p><br>
