@@ -33,6 +33,9 @@
 <p>テキストや画像を投稿することができます。</p>
 <img src="https://user-images.githubusercontent.com/78944548/125280849-800a9c80-e350-11eb-8d3f-e68263842eb9.gif">
  
+# 外部リンク
+https://phpfullscratch0701.herokuapp.com
+ 
 # 追加したい機能
 <p>退会機能</p>
 <p>ハッシュタグ検索</p>
