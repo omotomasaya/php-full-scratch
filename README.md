@@ -1,6 +1,6 @@
 # php-full-scratch
 
-<img src="">
+<img src="https://user-images.githubusercontent.com/78944548/125262483-2d73b500-e33d-11eb-876b-72029010c739.png">
 
 # 目的
 <p>phpの学習のために作成しました。</p>
@@ -31,7 +31,7 @@
 # 使い方
  
 <p>テキストや画像を投稿することができます。</p>
- 
+<img src="https://user-images.githubusercontent.com/78944548/125280849-800a9c80-e350-11eb-8d3f-e68263842eb9.gif">
  
 # 追加したい機能
 <p>退会機能</p>
