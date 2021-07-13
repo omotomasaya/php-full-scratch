@@ -4,7 +4,9 @@ $(function(){
     var tweet_id = $('#commentField').data('tweet');
 
     $.ajax({
-        url: "http://localhost:8888/phpfullscratch/core/ajax/comment.php",
+        // ローカル用
+        // url: "http://localhost:8888/phpfullscratch/core/ajax/comment.php",
+        url: "https://phpfullscratch0701.herokuapp.com/core/ajax/comment.php",
         method: "POST",
         data: {
             comment:comment,

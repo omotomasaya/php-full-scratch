@@ -2,7 +2,9 @@ $(function(){
     $(document).on('click','.deleteTweet', function(){
         var tweetID  = $(this).data('tweet');
         $.ajax({
-            url: "http://localhost:8888/phpfullscratch/core/ajax/deleteTweet.php",
+            // ローカル用
+            // url: "http://localhost:8888/phpfullscratch/core/ajax/deleteTweet.php",
+            url: "https://phpfullscratch0701.herokuapp.com/core/ajax/deleteTweet.php",
             method: "POST",
             data: {
                 deleteTweet:tweetID
@@ -17,7 +19,9 @@ $(function(){
         var tweetID  = $(this).data('tweet');
         var comment_id  = $(this).data('comment');
         $.ajax({
-            url: "http://localhost:8888/phpfullscratch/core/ajax/deleteComment.php",
+            // ローカル用
+            // url: "http://localhost:8888/phpfullscratch/core/ajax/deleteComment.php",
+            url: "https://phpfullscratch0701.herokuapp.com/core/ajax/deleteComment.php",
             method: "POST",
             data: {
                 tweetID:tweetID,
