@@ -36,7 +36,7 @@
 # 外部リンク
 https://phpfullscratch0701.herokuapp.com
 
-下記の情報でログインできます。
+下記の情報でログインできます。<br>
 メール　　：test@test.com
 パスワード：testtest
  
