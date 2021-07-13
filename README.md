@@ -35,6 +35,10 @@
  
 # 外部リンク
 https://phpfullscratch0701.herokuapp.com
+
+下記の情報でログインできます。
+メール　　：test@test.com
+パスワード：testtest
  
 # 追加したい機能
 <p>退会機能</p>
