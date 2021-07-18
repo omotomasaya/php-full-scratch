@@ -64,6 +64,7 @@ if(isset($_FILES['profileImage'])){
       </span>
     </li>
     <li><a href="public/logout.php">ログアウト</a></li>
+    <li><a href="deleteAccount.php">アカウント削除</a></li>
   </ul>
 </nav> 
 </div>
