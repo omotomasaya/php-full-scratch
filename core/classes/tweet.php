@@ -161,6 +161,30 @@
       return $stmt->fetchAll(PDO::FETCH_OBJ);
     }
 
+    public function deleteLIke($user_id){
+
+      $stmt = $this->pdo->prepare("DELETE FROM likes WHERE takeLike = :user_id OR getLike = :user_id");
+      $stmt->bindValue(':user_id', $user_id, PDO::PARAM_INT);
+      $stmt->execute();
+
+    }
+
+    public function deleteAllTweet($user_id){
+
+      $stmt = $this->pdo->prepare("DELETE FROM tweets WHERE tweetBy = :user_id");
+      $stmt->bindValue(':user_id', $user_id, PDO::PARAM_INT);
+      $stmt->execute();
+
+    }
+
+    public function deleteAllComments($user_id){
+
+      $stmt = $this->pdo->prepare("DELETE FROM comments WHERE commentBy = :user_id OR commented = :user_id");
+      $stmt->bindValue(':user_id', $user_id, PDO::PARAM_INT);
+      $stmt->execute();
+
+    }
+
 
   }
 ?>
