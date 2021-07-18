@@ -7,6 +7,10 @@
   $user = DB_USER;
   $pass = DB_PASS;
 
+  // $dsn = "mysql:host=localhost; dbname=twitterclone";
+  // $user = root;
+  // $pass = root;
+
   try {
     $pdo = new PDO($dsn, $user, $pass, [
       PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,

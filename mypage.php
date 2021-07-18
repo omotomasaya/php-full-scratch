@@ -107,7 +107,6 @@ require_once('core/class.php');
     ?>
 
   </div>
-
   <div class="tweets">
     <?php
       $tweets = $getFromT->getUserTweets($profileId);

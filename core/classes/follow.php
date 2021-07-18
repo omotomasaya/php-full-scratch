@@ -132,6 +132,14 @@
             }
       echo '</div></div>';
     }
+
+    public function deleteFollow($user_id){
+
+      $stmt = $this->pdo->prepare("DELETE FROM relation WHERE follow = :user_id OR followed = :user_id");
+      $stmt->bindValue(':user_id', $user_id, PDO::PARAM_INT);
+      $stmt->execute();
+
+    }
     
   }
 ?>

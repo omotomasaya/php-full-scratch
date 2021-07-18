@@ -136,5 +136,16 @@ class User {
     header('Location: ../index.php');
     exit;
   }
+
+  public function deleteAccount($user_id){
+
+    $stmt = $this->pdo->prepare("DELETE FROM users WHERE user_id = :user_id");
+    $stmt->bindValue(':user_id', $user_id, PDO::PARAM_INT);
+    $stmt->execute();
+    session_destroy();
+    header('Location: index.php');
+    exit;
+
+  }
 }
 ?>
