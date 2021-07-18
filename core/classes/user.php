@@ -114,14 +114,18 @@ class User {
 
   public function loggedIn(){
     if(isset($_SESSION['user_id'])) {
-      header('Location: http://localhost:8888/phpfullscratch/home.php');
+      // ローカル用
+      // header('Location: http://localhost:8888/phpfullscratch/home.php');
+      header('Location: https://phpfullscratch0701.herokuapp.com/home.php');
       exit;
     }
   }
 
   public function unloggedIn(){
     if(!isset($_SESSION['user_id'])) {
-      header('Location: http://localhost:8888/phpfullscratch/index.php');
+      // ローカル用
+      // header('Location: http://localhost:8888/phpfullscratch/index.php');
+      header('Location: https://phpfullscratch0701.herokuapp.com/index.php');
       exit;
     }
   }

@@ -3,7 +3,9 @@ $(function(){
         var tweetID  = $(this).data('tweet');
         var tweet_id  = $(this).data('user');
         $.ajax({
-            url: "http://localhost:8888/phpfullscratch/core/ajax/like.php",
+            // ローカル用
+            // url: "http://localhost:8888/phpfullscratch/core/ajax/like.php",
+            url: "https://phpfullscratch0701.herokuapp.com/core/ajax/like.php",
             method: "POST",
             data: {
                 like:tweetID,
@@ -19,7 +21,9 @@ $(function(){
         var tweetID  = $(this).data('tweet');
         var tweet_id  = $(this).data('user');
         $.ajax({
-            url: "http://localhost:8888/phpfullscratch/core/ajax/like.php",
+            // ローカル用
+            // url: "http://localhost:8888/phpfullscratch/core/ajax/like.php",
+            url: "https://phpfullscratch0701.herokuapp.com/core/ajax/like.php",
             method: "POST",
             data: {
                 unlike:tweetID,

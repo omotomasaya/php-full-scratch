@@ -1,7 +1,11 @@
 <?php
-  $dsn = 'mysql:host=localhost; dbname=twitterclone';
-  $user = 'root';
-  $pass = 'root';
+  require_once('env.php');
+
+  $host = DB_HOST;
+  $dbname = DB_NAME;
+  $dsn = "mysql:host=$host; dbname=$dbname";
+  $user = DB_USER;
+  $pass = DB_PASS;
 
   try {
     $pdo = new PDO($dsn, $user, $pass, [
